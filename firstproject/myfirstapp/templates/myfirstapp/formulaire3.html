@@ -1,0 +1,12 @@
+{% extends "myfirstapp/main.html" %}
+
+{% block title %} Mon formulaire {% endblock %}
+{% block content %}
+        <!-- les champs de formulaires -->
+        {{block.super}} <!-- récupére les données par défaut du bloc content du squelette -->
+        <form action="/myfirstapp/bonjour" method="get" />
+    {% csrf_token %}
+    ...     <input type="submit" value="envoyer"
+    <\form>
+
+{% endblock %}
